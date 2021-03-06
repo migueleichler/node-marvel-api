@@ -3,8 +3,7 @@ const app = express();
 
 
 app.get('/hero', (request, response) => {
-    response.setHeader('Content-Type', 'application/json');
-    response.status(200).send(JSON.stringify({'status': 'success'}));
+    response.status(200).json({'status': 'success'});
 });
 
 
