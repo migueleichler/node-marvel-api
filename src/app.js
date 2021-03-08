@@ -1,14 +1,15 @@
 var express = require('express');
-var morgan = require('morgan')
+var morgan = require('morgan');
+var heroRouter = require('./controllers/hero');
 
 var app = express();
 
 
+// Middlewares
 app.use(morgan('tiny'));
 
-app.get('/hero', (request, response) => {
-    response.status(200).json({'status': 'success'});
-});
+// Routes
+app.use('/hero', heroRouter);
 
 
 module.exports = app;
