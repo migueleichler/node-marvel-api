@@ -8,6 +8,4 @@ RUN npm install
 
 COPY . .
 
-RUN echo "PWD is: $PWD"
-
-CMD [ "node", "src/server.js" ]
+CMD [ "npm", "start" ]
